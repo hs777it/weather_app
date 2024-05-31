@@ -9,6 +9,13 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Weather App'),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.search,
+              ))
+        ],
       ),
       body: const NoWeatherBody(),
     );
