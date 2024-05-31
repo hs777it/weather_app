@@ -6,9 +6,26 @@ class SearchView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Search City'),
-      ),
-    );
+        appBar: AppBar(
+          title: const Text('Search City'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Center(
+            child: TextField(
+              onSubmitted: (value) {},
+              decoration: const InputDecoration(
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 32, horizontal: 16),
+                labelText: 'Search',
+                hintText: 'Enter city name',
+                suffixIcon: Icon(Icons.search),
+                border: OutlineInputBorder(
+                  borderSide: BorderSide(color: Colors.green),
+                ),
+              ),
+            ),
+          ),
+        ));
   }
 }
