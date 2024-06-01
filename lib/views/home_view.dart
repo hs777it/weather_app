@@ -35,3 +35,11 @@ class _HomeViewState extends State<HomeView> {
     );
   }
 }
+
+/* Bloc Steps */
+// create states
+// create cubit
+// create function
+// provide cubit
+// integrate cubit
+// trigger cubit
