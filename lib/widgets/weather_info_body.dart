@@ -12,25 +12,18 @@ class WeatherInfoBody extends StatelessWidget {
         children: [
           const Text(
             'Cairo',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 32,
-            ),
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 32),
           ),
           const Text(
             'updated at 23:46',
-            style: TextStyle(
-              fontSize: 24,
-            ),
+            style: TextStyle(fontSize: 24),
           ),
-          const SizedBox(
-            height: 32,
-          ),
+          const SizedBox(height: 32),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Image.asset(
-                'assets/images/cloudy.png',
+                'images/cloudy.png',
               ),
               const Text(
                 '17',
