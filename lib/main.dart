@@ -1,5 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/cubits/get_weather_cubit/weather_cubit.dart';
 import 'package:weather_app/views/home_view.dart';
 
 void main() => runApp(
@@ -14,14 +16,17 @@ class WeatherApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      //theme: ThemeData(useMaterial3: false),
-      //useInheritedMediaQuery: true,
-      locale: DevicePreview.locale(context),
-      builder: DevicePreview.appBuilder,
-      theme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
-      home: const HomeView(),
+    return BlocProvider(
+      create: (context) => WeatherCubit(),
+      child: MaterialApp(
+        //theme: ThemeData(useMaterial3: false),
+        //useInheritedMediaQuery: true,
+        locale: DevicePreview.locale(context),
+        builder: DevicePreview.appBuilder,
+        theme: ThemeData.light(),
+        darkTheme: ThemeData.dark(),
+        home: const HomeView(),
+      ),
     );
   }
 }
