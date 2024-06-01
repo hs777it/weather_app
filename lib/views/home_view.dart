@@ -34,9 +34,7 @@ class _HomeViewState extends State<HomeView> {
         if (state is WeatherInitialState) {
           return const NoWeatherBody();
         } else if (state is WeatherLoadedState) {
-          return WeatherInfoBody(
-            weatherModel: state.weatherModel,
-          );
+          return const WeatherInfoBody();
         } else {
           return const Text('opps there was an error');
         }
